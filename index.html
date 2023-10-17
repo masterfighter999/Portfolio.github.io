@@ -294,6 +294,7 @@
 			<div class="footer-fourth">
 				<li>+91 6295804451 &#9742;</li>
 				<li><u>swayamchatterjee@gmail.com</u>  &#9993;</li>
+				<li> This page has been viewed <span id="viewCount">0</span> times.</li>
 			</div>
 		</div>
 		<div class="footer-rights">
@@ -316,6 +317,21 @@
 		alert("Phele phusrat me nikal"):
 	 } */
 	
+	
+	function incrementViewCount() {
+            let count = parseInt(localStorage.getItem("viewCount")) || 0;
+            count++;
+            document.getElementById("viewCount").textContent = count;
+            localStorage.setItem("viewCount", count);
+        }
+
+        /* function resetViewCount() {
+            localStorage.removeItem("viewCount");
+            document.getElementById("viewCount").textContent = "0";
+        }
+
+        document.getElementById("resetButton").addEventListener("click", resetViewCount); */
+        incrementViewCount(); 
   </script>
 </body>
 </html>
